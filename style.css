@@ -1,0 +1,346 @@
+/*
+Theme Name: HCI
+Description: HCI Main theme
+Version: 1.0
+Author: UCLA Social Sciences Computing
+License: Themeforest Split Licence
+License URI: -
+Theme URI: www.kriesi.at/themes/enfold/
+Template: enfold
+*/
+
+/* Front page background color. */
+.home #main {
+    background-color: white;
+}
+
+/***************************************************
+Top Header Area
+****************************************************/
+/* Top header color. */
+.header_color .container_wrap_meta {
+    background-color: #314b5e !important;
+}
+
+/* Top bar header size. */
+.header .phone-info {
+    padding: 3px;
+    font-size: 15px;
+    font-weight: normal;
+}
+
+/* "The Healthy Campus Initiative is envisioned ..."
+    Block at the top of the page. */
+.phone-info span {
+    font-weight: normal;
+    font-size: 14px;
+}
+/* Make this block not dipslay at certain resolutions. */
+@media only screen and (min-width: 767px) and (max-width: 920px) {
+    .phone-info {
+        display: none;
+    }
+}
+
+/* Top header UCLA media icon. */
+#top #wrap_all .av-social-link-dribbble a:before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    margin-right: 10px;
+    display: inline-block;
+    vertical-align: middle;
+    background: url("http://hci.ss.ucla.edu/wp-content/uploads/2017/08/ucla-logo.png") no-repeat center center;
+    background-size: contain;
+}
+
+/* Formatting for UCLA Box logo in social media bar in the top header. */
+#top li.social_bookmarks_dribbble.av-social-link-dribbble, #top li.social_bookmarks_dribbble.av-social-link-dribbble a {
+    width: 62px;
+    font-size: 0;
+    height: 100%;
+}
+
+/* Remove border before UCLA Box logo in social media bar in the top header */
+#top #header .social_bookmarks li:nth-last-child(2) {
+    border-right: 0;
+}
+
+
+/***************************************************
+Bottom/Main Header Area
+****************************************************/
+/* Set color of transparent bottom header section. */
+header#header {
+    background: rgba(0,0,0,0.3);
+}
+
+/* Menu over video slider. */
+#header_background {
+    padding-bottom: 0!important;
+}
+
+#header_main {
+    /* Fix z-index so logo can overlap top header. */
+    z-index: 11;
+    border-bottom-style: none;
+    /* Bottom header color transitions. */
+    -webkit-transition: background-color .3s ease-in-out;
+    transition: background-color .3s ease-in-out;
+    -moz-transition: background-color .3s ease-in-out;
+}
+
+/* Transparent bottom header for mobile. */
+@media only screen and (max-width: 767px) {
+    #top #wrap_all .header_color.av_header_transparency {
+        background-color: transparent;
+    }
+}
+
+
+/***************************************************
+Header Logo
+****************************************************/
+/* Make logo overlap top header. */
+.header-scrolled .logo,
+.logo {
+    position: relative;
+    bottom: 25px;
+}
+
+@media only screen and (max-width: 767px) {
+    .logo img {
+        border: 2px solid #fff;
+        border-radius: 50%;
+    }
+}
+
+/* Space above logo in mobile. */
+#header_main {
+    padding-top: 5px;
+}
+
+/* Fix spacing gap between slider and bottom of header in mobile. */
+@media only screen and (max-width: 767px) {
+    .responsive #top .logo {
+        padding: 2px 0 5px 0;
+    }
+}
+
+/***************************************************
+Navigation Bar
+****************************************************/
+/* Change background color of sub-menu navigation. */
+#top .av-main-nav ul.sub-menu,
+header.header_color .main_menu ul ul,
+header.header_color .main_menu ul ul li,
+header.header_color .main_menu .menu ul li a {
+    background: rgba(0,0,0,0.3);
+    border: none;
+}
+
+/* Increase padding in menu. */
+#top #header .av-main-nav > li > a {
+    padding: 0 23px;
+}
+
+/* remove white line in menu on hover */
+.av-main-nav li:hover span.avia-menu-fx {
+    display: none;
+}
+
+/* quicker responsive menu 
+@media only screen and (max-width: 1248px) {
+.responsive #header .main_menu .av-burger-menu-main { display: none; } 
+.mobile_active #advanced_menu_toggle { display: block; }
+}*/
+@media only screen and (max-width: 1190px) { 
+    .responsive #top .av-main-nav .menu-item-avia-special {
+        display: none !important;
+    }
+    .responsive #header .main_menu { 
+        display: none; 
+    } 
+}
+
+.responsive-menu-slide-left button#responsive-menu-button {
+    top: 65px;
+}
+
+/* adding padding to the default pages */
+.page-template-default #wrap_all .container_wrap_first {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+
+/***************************************************
+Picture Gallery Slider
+****************************************************/
+.home .avia-fullscreen-slider div.av_fullscreen {
+    height: 94vh;
+}
+
+/* Align full-width slider picture to top on homepage. */
+.html_header_top.html_header_topbar_active.html_header_sticky #top.home #main {
+    margin-top: -40px !important; 
+    padding-top: 0;
+}
+
+/* remove animation from slider captions */
+.avia-caption-title, .avia-caption-content, .avia-slideshow-button {
+  -webkit-animation: 0s ease 0s normal none 1 running none !important;
+  animation: 0s ease 0s normal none 1 running none !important;
+  visibility: visible !important;
+}
+
+@media only screen and (max-width: 767px) {
+    .html_header_top.html_header_topbar_active.html_header_sticky #top.home #main {
+        margin-top: -91px !important;
+    }
+}
+
+.home #full_slider_1 {
+    position: relative !important;
+    top: -50px !important;
+}
+
+#motto .container {
+   max-width: 1000px;
+   margin-top: 20px;
+}
+
+
+/***************************************************
+Motto (Text section below slider)
+****************************************************/
+/* Fix white space above motto. */
+#top #main #motto .template-page.content {
+    padding-top: 0px;
+}
+
+#top #motto .container h1 {
+    text-transform: inherit;
+}
+
+/* Make header in HCI slogan white. */
+#top #motto .container h1 {
+    margin-bottom: 20px;
+}
+
+
+/***************************************************
+Pods
+****************************************************/
+/* Remove white from pods. */
+#top .header_color.av_header_transparency span.avia-menu-fx,
+.current-menu-item > a > span.avia-menu-fx {
+    background: transparent;
+}
+
+/* Pod styling. */
+#pods .avia-image-container.avia-align-center {
+    /*display: inline-block;
+    margin: 10px; */
+    max-width: 250px;
+}
+
+@media only screen and (max-width: 989px) and (min-width: 768px) {
+    .responsive #pods .av_one_fourth.first {
+        width: 48%;
+    }
+}
+@media only screen and (max-width: 767px) {
+    .responsive #top #wrap_all #pods .av_one_fourth {
+        width: 46%;
+        margin-right: 4%;
+    }
+}
+
+#pods .av-image-caption-overlay-center {
+    opacity: 0;
+}
+
+#pods .av-image-caption-overlay-center:hover {
+    opacity: 1;
+}
+
+#pods .av-image-caption-overlay:hover {
+    background-color: black;
+    border-radius: 25%;
+}
+
+#pods .avia-image-container-inner img {
+    box-shadow: 7px 7px 10px #888888;
+    border-radius: 50%;
+}
+
+#pods .av-image-caption-overlay-center p {
+     font-size: 12px;
+}
+
+/* No captions on pods for mobile. */
+@media only screen and (max-width: 480px) {
+    #pods .container .av-image-caption-overlay-center:hover {
+          display: none;
+    }
+    #pods .container .av-image-caption-overlay:hover {
+          background-color: transparent;
+    }
+}
+
+
+/***************************************************
+Footer
+****************************************************/
+#footer .widget {
+    margin: 0;
+}
+#footer {
+    padding: 0;
+}
+
+/* Footer text centered. */
+#text-2 p {
+   display: inline-block;
+   vertical-align: -webkit-baseline-middle;
+   margin-right: 20px;
+}
+
+
+/***************************************************
+*
+Content Page Specifics
+*
+****************************************************/
+
+/* Prevents Title/Breadcrumb area from overlapping with navbar at these resolutions. */
+@media only screen and (max-width: 989px) and (min-width: 768px) {
+    .title_container{
+        padding-top: 30px;
+    }
+}
+
+span.breadcrumb-title {
+       display: none;
+}
+
+
+/***************************************************
+Events
+****************************************************/
+/* Events page header color. */
+#top #wrap_all .all_colors h2.tribe-events-page-title {
+    color: #86c8e9;
+}
+
+/* Tribe events. */
+.tribe-events-list-widget li.tribe-events-list-widget-events {
+    margin-left: 0;
+    padding-left: 0;
+}
+
+/* Events page header color. */
+#top #wrap_all .all_colors h2.tribe-events-page-title {
+    color: #86c8e9;
+}
